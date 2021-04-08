@@ -21,7 +21,27 @@ function woodCalculator(khat, table, chair){
 
 
 //  3rd problem : brickCalculator
+function brickCalculator(floorNumber){
+    var perFloor = floorNumber * 1000;
+    var totalBrick;
 
+    if(floorNumber > 0 && floorNumber <= 10){
+        totalBrick = perFloor * 15;
+    }
+    else if (floorNumber > 10 && floorNumber <= 20){
+        totalBrick = perFloor * 12;
+    }
+    else if (floorNumber > 20){
+        totalBrick = perFloor * 10;
+    }
+    else {
+        totalBrick = ('it is undifined');
+    }
+    return totalBrick;
+}
+
+var result = brickCalculator(30);
+console.log('total needed : ' + result + ' brick');
 
 
 // 4th problem : tinyFriend
